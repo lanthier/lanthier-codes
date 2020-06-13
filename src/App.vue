@@ -3,7 +3,7 @@
     <nav class="navbar is-spaced" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="logo" href="https://bulma.io">
-          <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
+          <img alt="Vue logo" src="./assets/logo.png" />
         </a>
 
         <a
@@ -39,7 +39,7 @@
         </div>
       </div>
     </nav>
-    <router-view />
+    <router-view class="container" />
   </div>
 </template>
 <script>
