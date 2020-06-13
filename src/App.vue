@@ -1,12 +1,8 @@
 <template>
   <div id="app">
-    <!-- <div class="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>-->
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-spaced" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
+        <a class="logo" href="https://bulma.io">
           <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
         </a>
 
@@ -28,7 +24,9 @@
       <div id="menu" ref="menu" class="navbar-menu">
         <div class="navbar-start">
           <template v-for="route in routes">
-            <a v-if="route.meta.nav" :key="route.path" class="navbar-item"><router-link :to="route.path">{{ route.meta.displayName }}</router-link></a>
+            <router-link v-if="route.meta.nav" :key="route.path" class="navbar-item" :to="route.path" @click.native="toggleBurger">
+              <span>{{ route.meta.displayName }}</span>
+            </router-link>
           </template>
         </div>
 
@@ -50,7 +48,6 @@ import { Component, Vue } from 'vue-property-decorator'
 @Component
 export default class App extends Vue {
   get routes () {
-    console.log(this.$router.options.routes)
     return this.$router.options.routes
   }
 
@@ -71,4 +68,51 @@ export default class App extends Vue {
 </script>
 <style lang="scss">
 @import "styles/index.scss";
+
+.navbar-item {
+  margin: 0px 8px;
+  @media only screen and (min-width: 1024px) {
+    &:hover, &.router-link-active {
+      padding: .75em;
+      border: 0.15em solid white;
+      position: relative;
+
+      &::before, &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        background: #212121;
+      }
+
+      &::before {
+        top: -0.3em;
+        bottom: -0.3em;
+        left: .75em;
+        right: .75em;
+      }
+
+      &::after{
+        left: -0.3em;
+        right: -0.3em;
+        top: .75em;
+        bottom: .75em;
+      }
+
+      span {
+        z-index: 1;
+      }
+    }
+  }
+  @media only screen and (max-width: 1023px) {
+    &.router-link-active {
+      background-color: white;
+      color: black;
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
 </style>
