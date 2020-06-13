@@ -25,12 +25,11 @@
         </a>
       </div>
 
-      <div ref="menu" id="menu" class="navbar-menu">
+      <div id="menu" ref="menu" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item"><router-link to="/">HTML/CSS</router-link></a>
-          <a class="navbar-item"><router-link to="/">JavaScript</router-link></a>
-          <a class="navbar-item"><router-link to="/">Python</router-link></a>
-          <a class="navbar-item"><router-link to="/">C#</router-link></a>
+          <template v-for="route in routes">
+            <a v-if="route.meta.nav" :key="route.path" class="navbar-item"><router-link :to="route.path">{{ route.meta.displayName }}</router-link></a>
+          </template>
         </div>
 
         <div class="navbar-end">
@@ -50,6 +49,11 @@ import { Component, Vue } from 'vue-property-decorator'
 
 @Component
 export default class App extends Vue {
+  get routes () {
+    console.log(this.$router.options.routes)
+    return this.$router.options.routes
+  }
+
   toggleBurger () {
     const burger = this.$refs.burger
     const menu = this.$refs.menu
