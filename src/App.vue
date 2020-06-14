@@ -5,7 +5,6 @@
         <a class="logo" href="https://bulma.io">
           <img alt="Vue logo" src="./assets/logo.png" />
         </a>
-
         <a
           ref="burger"
           role="button"
@@ -115,4 +114,5 @@ export default class App extends Vue {
   display: flex;
   align-items: center;
 }
+
 </style>

@@ -10,3 +10,20 @@ $navbar-tab-active-border-bottom-style: 3px solid white;
 $navbar-tab-hover-border-bottom-color: "white";
 $navbar-tab-hover-border-bottom-style: 3px solid white;
 @import '~bulma/bulma';
+
+// Shame on prismjs and bulma for not prefixing their classes
+.token.tag,
+.token.content,
+.token.number {
+  display: inline;
+  padding: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  vertical-align: inherit;
+  border-radius: inherit;
+  font-weight: inherit;
+  white-space: inherit;
+  background: inherit;
+  margin: inherit;
+}
