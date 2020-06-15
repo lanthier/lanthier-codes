@@ -8,12 +8,12 @@ export const blogTags: Record<string, BlogTag> = {
   },
   'C#': {
     name: 'C#',
-    background: '#178600'
+    background: '#178600',
+    textColor: 'white'
   },
   'CSS': {
     name: 'CSS',
-    background: '#563d7c',
-    textColor: 'white'
+    background: '#563d7c'
   },
   'HTML': {
     name: 'HTML',

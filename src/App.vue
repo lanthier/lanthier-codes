@@ -2,9 +2,9 @@
   <div id="app">
     <nav class="navbar is-spaced" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <a class="logo" href="https://bulma.io">
+        <router-link class="logo" to="/">
           <img alt="Vue logo" src="./assets/logo.png" />
-        </a>
+        </router-link>
         <a
           ref="burger"
           role="button"
@@ -32,7 +32,7 @@
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
-              <a class="button is-light">Contact</a>
+              <a class="button is-light" href="malito:lanthier72@gmail.com">Contact</a>
             </div>
           </div>
         </div>
