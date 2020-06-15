@@ -1,23 +1,21 @@
 <template>
   <section>
-    Python
-    <BlogView :blog="blog" />
+    <h1 class="title">
+      Python
+    </h1>
+    <Category name="Python" />
   </section>
 </template>
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
-import BlogView from '@/components/BlogView.vue'
-import { blogs } from '@/blogs/blogs'
+import Category from '@/views/Category.vue'
 
 @Component({
   components: {
-    BlogView
+    Category
   }
 })
 export default class Python extends Vue {
-  get blog () {
-    return blogs[0]
-  }
 }
 </script>
 <style lang="scss" scoped>

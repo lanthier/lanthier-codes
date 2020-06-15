@@ -48,6 +48,15 @@ const routes: Array<RouteConfig> = [
       nav: true
     },
     component: () => import('@/views/Python.vue')
+  },
+  {
+    path: '/blog/:title',
+    name: 'Blog',
+    meta: {
+      displayName: 'Blog',
+      nav: false
+    },
+    component: () => import('@/views/BlogView.vue')
   }
 ]
 

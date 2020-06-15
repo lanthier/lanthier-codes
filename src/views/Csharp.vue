@@ -1,12 +1,21 @@
 <template>
   <section>
-    Csharp
+    <h1 class="title">
+      C#
+    </h1>
+    <Category name="CSharp" />
   </section>
 </template>
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
-@Component
-export default class Csharp extends Vue {
+import Category from '@/views/Category.vue'
+
+@Component({
+  components: {
+    Category
+  }
+})
+export default class CSharp extends Vue {
 }
 </script>
 <style lang="scss" scoped>
