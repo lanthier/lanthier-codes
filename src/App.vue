@@ -115,4 +115,8 @@ export default class App extends Vue {
   align-items: center;
 }
 
+.container {
+  margin-top: 32px;
+}
+
 </style>

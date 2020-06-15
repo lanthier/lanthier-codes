@@ -41,9 +41,4 @@ export default class Category extends Vue {
 }
 </script>
 <style lang="scss" scoped>
-.blog-card {
-  width: 300px;
-  height: 200px;
-  margin: 32px;
-}
 </style>

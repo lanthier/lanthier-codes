@@ -2,6 +2,6 @@ export enum BlogCategory {
   Python = 'Python',
   JavaScript = 'JavaScript',
   HtmlCss = 'HTML/CSS',
-  CSharp = 'C#',
+  CSharp = 'CSharp',
   General = 'General'
 }

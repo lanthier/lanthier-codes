@@ -8,24 +8,20 @@
     <div class="card-content">
       <div class="content">
         <div class="blog-tags">
-          <template v-for="tag in blog.tags">
-            <BlogTagChip :key="tag.name" :blog-tag="tag" class="spaced" />
+          <template>
+            <BlogTagChip v-for="tag in blog.tags" :key="tag.name" :blog-tag="tag" class="spaced" />
           </template>
         </div>
         {{ blog.description }}
       </div>
     </div>
     <footer class="card-footer">
-      <div class="card-footer-item">
-        <a @click="share">
-          Share
-        </a>
-      </div>
-      <div class="card-footer-item">
-        <a @click="navigateToBlog">
-          View
-        </a>
-      </div>
+      <a class="card-footer-item" @click="share">
+        Share
+      </a>
+      <a class="card-footer-item" @click="navigateToBlog">
+        View
+      </a>
     </footer>
   </div>
 </template>
@@ -58,4 +54,27 @@ export default class BlogCard extends Vue {
 .spaced {
   margin-right: 4px;
 }
+
+.card {
+  width: 300px;
+  margin: 32px;
+}
+
+.card-content {
+  height: 135px;
+overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 3;
+-webkit-box-orient: vertical;
+}
+
+.card-footer {
+  height: 45px;
+}
+
+.blog-tags {
+  margin-bottom: 12px;
+}
+
 </style>

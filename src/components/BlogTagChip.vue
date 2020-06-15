@@ -15,7 +15,8 @@ export default class BlogTagChip extends Vue {
 
   get style () {
     return {
-      'background-color': this.blogTag.color
+      'background-color': this.blogTag.background,
+      color: this.blogTag.textColor
     }
   }
 }

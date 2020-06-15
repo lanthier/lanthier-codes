@@ -1,20 +1,24 @@
 export class BlogTag {
   name: string
-  color: string
+  background: string
+  textColor?: string
 
   public constructor(src?: IBlogTag) {
     if (src) {
       this.name = src.name
-      this.color = src.color
+      this.background = src.background
+      this.textColor = src.textColor
     }
     else {
       this.name = ''
-      this.color = '#FFFFFF'
+      this.background = '#FFFFFF'
+      this.textColor = '#4a4a4a'
     }
   }
 }
 
 export interface IBlogTag {
   name: string
-  color: string
+  background: string
+  textColor: string
 }

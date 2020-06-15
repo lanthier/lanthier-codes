@@ -4,42 +4,45 @@ import { BlogTag } from '@/models/blog-tag'
 export const blogTags: Record<string, BlogTag> = {
   'ASP': {
     name: 'ASP',
-    color: '#6a40fd'
+    background: '#6a40fd'
   },
   'C#': {
     name: 'C#',
-    color: '#178600'
+    background: '#178600'
   },
   'CSS': {
     name: 'CSS',
-    color: '#563d7c'
+    background: '#563d7c',
+    textColor: 'white'
   },
   'HTML': {
     name: 'HTML',
-    color: '#e34c26'
+    background: '#e34c26'
   },
   'Java': {
     name: 'Java',
-    color: '#b07219'
+    background: '#b07219'
   },
   'JavaScript': {
     name: 'JavaScript',
-    color: '#f1e05a'
+    background: '#f1e05a'
   },
   'Python': {
     name: 'Python',
-    color: '#3572A5'
+    background: '#3572A5',
+    textColor: 'white'
   },
   'TypeScript': {
     name: 'TypeScript',
-    color: '#2b7489'
+    background: '#2b7489'
   },
   'Vue': {
     name: 'Vue',
-    color: '#2c3e50'
+    background: '#2c3e50',
+    textColor: 'white'
   },
   'Gotcha': {
     name: 'Gotcha',
-    color: '#ffcc00'
+    background: '#ffcc00'
   }
 }
