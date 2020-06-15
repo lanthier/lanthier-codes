@@ -70,6 +70,7 @@ export default class App extends Vue {
 
 .navbar-item {
   margin: 0px 8px;
+  border: .15em solid #212121;
   @media only screen and (min-width: 1024px) {
     &:hover, &.router-link-active {
       padding: .75em;
