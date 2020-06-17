@@ -22,10 +22,18 @@ export const blogs: Array<Blog> = [
     tags: [blogTags['Vue'], blogTags['JavaScript'], blogTags['Gotcha']]
   },
   {
-    title: 'Useful CRUD Object Pattern in C# ',
+    title: 'Useful CRUD Object Pattern in C#',
     description: `Your objects might be messier than you think`,
     date: new Date(2020, 2, 21),
     category: BlogCategory.CSharp,
+    component: () => import('@/blogs/content/csharp-obj-pattern.vue'),
+    tags: [blogTags['C#']]
+  },
+  {
+    title: 'Make HTML Image Clickable',
+    description: `How to make your images behave like links`,
+    date: new Date(2019, 12, 13),
+    category: BlogCategory.HtmlCss,
     component: () => import('@/blogs/content/csharp-obj-pattern.vue'),
     tags: [blogTags['C#']]
   }

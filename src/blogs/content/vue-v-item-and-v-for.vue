@@ -44,9 +44,6 @@ export default class VueVItemAndVFor extends Vue {
 </script>
 
 <style scoped>
-.unlimited-height {
-  height: auto
-}
 .inline {
   display: inline;
   padding: 4px;

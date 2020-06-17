@@ -1,6 +1,6 @@
 <template>
   <section>
-    <Category name="CSharp" title="C#"/>
+    <Category name="CSharp" title="C#" />
   </section>
 </template>
 <script lang="ts">
