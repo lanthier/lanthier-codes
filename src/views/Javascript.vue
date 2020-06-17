@@ -1,9 +1,6 @@
 <template>
   <section>
-    <h1 class="title">
-      JavaScript
-    </h1>
-    <Category name="JavaScript" />
+    <Category name="JavaScript" title="JavaScript" />
   </section>
 </template>
 <script lang="ts">

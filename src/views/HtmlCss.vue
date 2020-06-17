@@ -1,9 +1,6 @@
 <template>
   <section>
-    <h1 class="title">
-      HTML/CSS
-    </h1>
-    <Category name="HtmlCss" />
+    <Category name="HtmlCss" title="HTML/CSS" />
   </section>
 </template>
 <script lang="ts">

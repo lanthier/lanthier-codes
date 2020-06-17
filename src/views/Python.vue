@@ -1,9 +1,6 @@
 <template>
   <section>
-    <h1 class="title">
-      Python
-    </h1>
-    <Category name="Python" />
+    <Category name="Python" title="Python" />
   </section>
 </template>
 <script lang="ts">

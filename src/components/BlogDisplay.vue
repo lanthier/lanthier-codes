@@ -22,6 +22,12 @@ export default class BlogDisplay extends Vue {
   margin: 64px;
 }
 
+@media only screen and (max-width: 1023px) {
+  .container {
+    margin: 6px;
+  }
+}
+
 .heading {
   display: flex;
   flex-direction: column;

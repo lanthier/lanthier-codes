@@ -1,9 +1,6 @@
 <template>
   <section>
-    <h1 class="title">
-      C#
-    </h1>
-    <Category name="CSharp" />
+    <Category name="CSharp" title="C#"/>
   </section>
 </template>
 <script lang="ts">
