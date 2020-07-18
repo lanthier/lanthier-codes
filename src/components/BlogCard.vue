@@ -55,22 +55,28 @@ export default class BlogCard extends Vue {
   margin-right: 4px;
 }
 
-.card {
+.blog-card {
   width: 300px;
   margin: 32px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-content {
   height: 135px;
-overflow: hidden;
-text-overflow: ellipsis;
-display: -webkit-box;
--webkit-line-clamp: 3;
--webkit-box-orient: vertical;
+}
+
+.content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .card-footer {
   height: 45px;
+  margin-top: auto;
 }
 
 .blog-tags {

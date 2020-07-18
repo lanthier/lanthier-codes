@@ -1,7 +1,8 @@
 <template>
   <section>
-    <p>Hey all, quick one tonight. All that we need to do to make an image clickable is wrap in
-      <pre class="inline">&lt;a&gt; tags.
+    <p>
+      Hey all, quick one tonight. All that we need to do to make an image clickable is wrap in
+      <pre class="inline">&lt;a&gt; tags.</pre>
     </p>
     <br />
     <prism language="html" :code="codeSnippet1" />
@@ -11,8 +12,8 @@
 import { Component, Vue } from 'vue-property-decorator'
 
 @Component
-export default class HtmlImgClickable extends Vue{
-  get codeSnippet1() {
+export default class HtmlImgClickable extends Vue {
+  get codeSnippet1 () {
     return `<a href="https://lanthiercodes.com">
   <img src="https://image.shutterstock.com/image-photo/shebear-bear-cubs-summer-forest-260nw-1217157787.jpg" />
 </a>`

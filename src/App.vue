@@ -23,7 +23,7 @@
       <div id="menu" ref="menu" class="navbar-menu">
         <div class="navbar-start">
           <template v-for="route in routes">
-            <router-link v-if="route.meta.nav" :key="route.path" class="navbar-item" :to="route.path" @click.native="toggleBurger">
+            <router-link v-if="route.meta.nav" :key="route.path" class="navbar-item four-corners" :to="route.path" @click.native="toggleBurger">
               <span>{{ route.meta.displayName }}</span>
             </router-link>
           </template>
@@ -68,7 +68,7 @@ export default class App extends Vue {
 <style lang="scss">
 @import "styles/index.scss";
 
-.navbar-item {
+.four-corners {
   margin: 0px 8px;
   border: .15em solid #212121;
   @media only screen and (min-width: 1024px) {
@@ -120,4 +120,8 @@ export default class App extends Vue {
   margin-top: 32px;
 }
 
+.inline {
+  display: inline;
+  padding: 4px;
+}
 </style>

@@ -13,7 +13,8 @@ export const blogTags: Record<string, BlogTag> = {
   },
   'CSS': {
     name: 'CSS',
-    background: '#563d7c'
+    background: '#563d7c',
+    textColor: 'white'
   },
   'HTML': {
     name: 'HTML',
@@ -44,5 +45,9 @@ export const blogTags: Record<string, BlogTag> = {
   'Gotcha': {
     name: 'Gotcha',
     background: '#ffcc00'
+  },
+  'Gridsome': {
+    name: 'Gridsome',
+    background: 'Aqua'
   }
 }

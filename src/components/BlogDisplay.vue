@@ -1,8 +1,12 @@
 <template>
   <section class="container">
     <div class="heading">
-      <h1 class="title">{{ blog.title }}</h1>
-      <h2 class="subtitle">{{ blog.description }}</h2>
+      <h1 class="title">
+        {{ blog.title }}
+      </h1>
+      <h2 class="subtitle">
+        {{ blog.description }}
+      </h2>
     </div>
     <hr />
     <component :is="blog.component" class="container" />

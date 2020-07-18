@@ -3,6 +3,7 @@ import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
+const defaultTitle = 'Lanthier Codes'
 
 const routes: Array<RouteConfig> = [
   {
@@ -18,7 +19,8 @@ const routes: Array<RouteConfig> = [
     name: 'htmlcss',
     meta: {
       displayName: 'HTML/CSS',
-      nav: true
+      nav: true,
+      title: 'Blogs - HTML/CSS'
     },
     component: () => import('@/views/HtmlCss.vue')
   },
@@ -27,7 +29,8 @@ const routes: Array<RouteConfig> = [
     name: 'JavaScript',
     meta: {
       displayName: 'JavaScript',
-      nav: true
+      nav: true,
+      title: 'Blogs - JavaScript'
     },
     component: () => import('@/views/Javascript.vue')
   },
@@ -36,7 +39,8 @@ const routes: Array<RouteConfig> = [
     name: 'C#',
     meta: {
       displayName: 'C#',
-      nav: true
+      nav: true,
+      title: 'Blogs - C#'
     },
     component: () => import('@/views/Csharp.vue')
   },
@@ -45,7 +49,8 @@ const routes: Array<RouteConfig> = [
     name: 'Python',
     meta: {
       displayName: 'Python',
-      nav: true
+      nav: true,
+      title: 'Blogs - Python'
     },
     component: () => import('@/views/Python.vue')
   },
@@ -64,6 +69,17 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
+})
+
+router.afterEach((to) => {
+  Vue.nextTick(() => {
+    if (to.name === 'Blog') {
+      document.title = to.params.title
+    }
+    else {
+      document.title = to.meta.title || defaultTitle
+    }
+  })
 })
 
 export default router
