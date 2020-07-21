@@ -60,5 +60,13 @@ export const blogs: Array<Blog> = [
     category: BlogCategory.JavaScript,
     component: () => import('@/blogs/content/counting-table-cells.vue'),
     tags: [blogTags['HTML'], blogTags["JavaScript"]]
+  },
+  {
+    title: 'Using the OpenWeatherAPI',
+    description: `A guide at how to call the open weather api using fetch, ajax, and xhr requests.`,
+    date: new Date(2020, 7, 20),
+    category: BlogCategory.JavaScript,
+    component: () => import('@/blogs/content/open-weather-api.vue'),
+    tags: [blogTags['HTML'], blogTags["JavaScript"]]
   }
 ]

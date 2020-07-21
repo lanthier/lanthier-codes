@@ -17,8 +17,6 @@ import 'prismjs/plugins/toolbar/prism-toolbar'
 import 'prismjs/plugins/autolinker/prism-autolinker.min'
 import 'prismjs/plugins/autolinker/prism-autolinker.css'
 
-// Prism.plugins.customClass.prefix('prism--') // Bulma and Prism collide
-
 Vue.config.productionTip = false
 Vue.component('prism', PrismComponent)
 new Vue({
