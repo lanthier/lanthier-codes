@@ -68,5 +68,13 @@ export const blogs: Array<Blog> = [
     category: BlogCategory.JavaScript,
     component: () => import('@/blogs/content/open-weather-api.vue'),
     tags: [blogTags['HTML'], blogTags["JavaScript"]]
+  },
+  {
+    title: 'HTTP Hydration Parameters',
+    description: `A pattern you can use to for your APIs.`,
+    date: new Date(2020, 7, 26),
+    category: BlogCategory.CSharp,
+    component: () => import('@/blogs/content/hydrate-parameter.vue'),
+    tags: [blogTags['C#']]
   }
 ]
