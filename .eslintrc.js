@@ -18,6 +18,7 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'brace-style': ['error', 'stroustrup'],
     'vue/max-attributes-per-line': 'off',
-    'vue/html-self-closing': 'off'
+    'vue/html-self-closing': 'off',
+    '@typescript-eslint/ban-ts-ignore': 'off'
   }
 }

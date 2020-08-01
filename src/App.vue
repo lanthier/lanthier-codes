@@ -38,6 +38,8 @@
         </div>
       </div>
     </nav>
+    <portal-target name="dialog-portal">
+    </portal-target>
     <router-view class="container" />
   </div>
 </template>

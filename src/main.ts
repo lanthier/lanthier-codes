@@ -3,8 +3,8 @@ import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
 import store from './store'
+import PortalVue from 'portal-vue'
 import PrismComponent from 'vue-prism-component'
-// import Prism from 'prismjs'
 import 'prismjs/themes/prism-okaidia.css'
 import 'prismjs/components/prism-scss.min'
 import 'prismjs/components/prism-javascript'
@@ -19,6 +19,8 @@ import 'prismjs/plugins/autolinker/prism-autolinker.css'
 
 Vue.config.productionTip = false
 Vue.component('prism', PrismComponent)
+Vue.use(PortalVue)
+
 new Vue({
   router,
   store,
