@@ -76,5 +76,13 @@ export const blogs: Array<Blog> = [
     category: BlogCategory.CSharp,
     component: () => import('@/blogs/content/hydrate-parameter.vue'),
     tags: [blogTags['C#']]
+  },
+  {
+    title: 'Python List Tricks',
+    description: `You can do really cool things in Python with lists.`,
+    date: new Date(2020, 7, 26),
+    category: BlogCategory.Python,
+    component: () => import('@/blogs/content/python-list-tricks.vue'),
+    tags: [blogTags['Python']]
   }
 ]
