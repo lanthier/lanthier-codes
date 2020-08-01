@@ -56,6 +56,7 @@ export default class Category extends Vue {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 1023px) {

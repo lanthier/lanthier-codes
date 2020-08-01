@@ -23,20 +23,24 @@
         View
       </a>
     </footer>
+    <ShareDialog ref="shareDialog" :blog="blog" />
   </div>
 </template>
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator'
 import { Blog } from '@/models/blog'
 import BlogTagChip from '@/components/BlogTagChip.vue'
+import ShareDialog from '@/components/ShareDialog.vue'
 
 @Component({
   components: {
-    BlogTagChip
+    BlogTagChip,
+    ShareDialog
   }
 })
 export default class BlogCard extends Vue {
-  @Prop() blog!: Blog;
+  @Prop() blog!: Blog
+  private dialogOpen = false
 
   public navigateToBlog () {
     this.$router.push({
@@ -46,9 +50,11 @@ export default class BlogCard extends Vue {
   }
 
   public share () {
-    console.log('look I am sharing')
+    const dialog = this.$refs.shareDialog as ShareDialog
+    dialog.toggle(true)
   }
 }
+
 </script>
 <style lang="scss" scoped>
 .spaced {
