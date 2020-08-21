@@ -19,9 +19,9 @@
       <a class="card-footer-item" @click="share">
         Share
       </a>
-      <a class="card-footer-item" @click="navigateToBlog">
+      <router-link class="card-footer-item" :to="'/blog/' + blog.title">
         View
-      </a>
+      </router-link>
     </footer>
     <ShareDialog ref="shareDialog" :blog="blog" />
   </div>
@@ -41,13 +41,6 @@ import ShareDialog from '@/components/ShareDialog.vue'
 export default class BlogCard extends Vue {
   @Prop() blog!: Blog
   private dialogOpen = false
-
-  public navigateToBlog () {
-    this.$router.push({
-      name: 'Blog',
-      params: { title: this.blog.title }
-    })
-  }
 
   public share () {
     const dialog = this.$refs.shareDialog as ShareDialog
