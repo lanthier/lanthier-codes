@@ -1,0 +1,171 @@
+[
+  {
+    "title": "String Format with Multiple Values in Python",
+    "description": "How to format multiple values on a string",
+    "date": "2020-08-20T04:20:39.465Z",
+    "component": "format-multiple-vals.vue",
+    "category": "Python",
+    "tags": [
+      {
+        "name": "Python",
+        "background": "#3572A5",
+        "textColor": "white"
+      }
+    ]
+  },
+  {
+    "title": "Dealing with v-for and v-if",
+    "description": "A common issue I have ran into while using v-for and v-if",
+    "date": "2020-02-13T06:00:00.000Z",
+    "component": "vue-v-item-and-v-for.vue",
+    "category": "JavaScript",
+    "tags": [
+      {
+        "name": "Vue",
+        "background": "#2c3e50",
+        "textColor": "white"
+      },
+      {
+        "name": "JavaScript",
+        "background": "#f1e05a"
+      },
+      {
+        "name": "Gotcha",
+        "background": "#ffcc00"
+      }
+    ]
+  },
+  {
+    "title": "Useful CRUD Object Pattern in C#",
+    "description": "Your objects might be messier than you think",
+    "date": "2020-03-21T05:00:00.000Z",
+    "component": "csharp-obj-pattern.vue",
+    "category": "CSharp",
+    "tags": [
+      {
+        "name": "C#",
+        "background": "#178600",
+        "textColor": "white"
+      }
+    ]
+  },
+  {
+    "title": "Make HTML Image Clickable",
+    "description": "How to make your images behave like links",
+    "date": "2020-01-13T06:00:00.000Z",
+    "category": "HTML/CSS",
+    "component": "html-img-clickable.vue",
+    "tags": [
+      {
+        "name": "HTML",
+        "background": "#e34c26"
+      },
+      {
+        "name": "CSS",
+        "background": "#563d7c",
+        "textColor": "white"
+      }
+    ]
+  },
+  {
+    "title": "Gridsome Flexsearch and Buefy Autocomplete",
+    "description": "Hooking up the gridsome flexsearch pluginto a b-autocomplete in Buefy",
+    "date": "2020-07-27T05:00:00.000Z",
+    "category": "JavaScript",
+    "component": "gridsome-search-buefy.vue",
+    "tags": [
+      {
+        "name": "JavaScript",
+        "background": "#f1e05a"
+      },
+      {
+        "name": "Gridsome",
+        "background": "Aqua"
+      }
+    ]
+  },
+  {
+    "title": "CSS Specificity",
+    "description": "The order of importance of CSS styles",
+    "date": "2020-08-13T05:00:00.000Z",
+    "category": "HTML/CSS",
+    "component": "css-specificity.vue",
+    "tags": [
+      {
+        "name": "HTML",
+        "background": "#e34c26"
+      },
+      {
+        "name": "CSS",
+        "background": "#563d7c",
+        "textColor": "white"
+      },
+      {
+        "name": "Gotcha",
+        "background": "#ffcc00"
+      }
+    ]
+  },
+  {
+    "title": "How to Count Cells in a Table",
+    "description": "JavaScript method of counting the amount of cells in an HTML table",
+    "date": "2020-08-17T05:00:00.000Z",
+    "category": "JavaScript",
+    "component": "counting-table-cells.vue",
+    "tags": [
+      {
+        "name": "HTML",
+        "background": "#e34c26"
+      },
+      {
+        "name": "JavaScript",
+        "background": "#f1e05a"
+      }
+    ]
+  },
+  {
+    "title": "Using the OpenWeatherAPI",
+    "description": "A guide at how to call the open weather api using fetch, ajax, and xhr requests.",
+    "date": "2020-08-20T05:00:00.000Z",
+    "category": "JavaScript",
+    "component": "open-weather-api.vue",
+    "tags": [
+      {
+        "name": "HTML",
+        "background": "#e34c26"
+      },
+      {
+        "name": "JavaScript",
+        "background": "#f1e05a"
+      }
+    ]
+  },
+  {
+    "title": "HTTP Hydration Parameters",
+    "description": "A pattern you can use to for your APIs.",
+    "date": "2020-08-26T05:00:00.000Z",
+    "category": "CSharp",
+    "component": "hydrate-parameter.vue",
+    "tags": [
+      {
+        "name": "C#",
+        "background": "#178600",
+        "textColor": "white"
+      }
+    ]
+  },
+  {
+    "title": "Python List Tricks",
+    "description": "You can do really cool things in Python with lists.",
+    "date": "2020-08-26T05:00:00.000Z",
+    "category": "Python",
+    "component": "python-list-tricks.vue",
+    "tags": [
+      {
+        "name": "Python",
+        "background": "#3572A5",
+        "textColor": "white"
+      }
+    ]
+  }
+]
