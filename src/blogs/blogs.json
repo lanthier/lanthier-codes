@@ -161,11 +161,31 @@
     "category": "Python",
     "component": "python-list-tricks.vue",
     "tags": [
-      {
-        "name": "Python",
-        "background": "#3572A5",
-        "textColor": "white"
-      }
+      "Python"
+    ]
+  },
+  {
+    "title": "Which Programming Language Should I Learn First?",
+    "description": "In 2020, what programming language should you learn first? Java, Python, JavaScript or another language?",
+    "date": "2020-08-26T05:00:00.000Z",
+    "category": "General",
+    "component": "which-programming-language.vue",
+    "tags": [
+      "Python",
+      "JavaScript",
+      "Java"
+    ]
+  },
+  {
+    "title": "Using Lit Elements with Gridsome",
+    "description": "After your create your own web component, how can we incoporate these elements into Gridsome?",
+    "date": "2020-09-01T05:00:00.000Z",
+    "category": "JavaScript",
+    "component": "lit-element-gridsome.vue",
+    "tags": [
+      "JavaScript",
+      "Gridsome",
+      "Vue"
     ]
   }
 ]

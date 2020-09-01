@@ -1,5 +1,6 @@
 import { BlogCategory } from '@/models/blog-category'
 import { BlogTag } from '@/models/blog-tag'
+import { blogTags } from '@/blogs/blog-tags'
 
 export class Blog implements IBlog {
   title: string;
@@ -10,28 +11,12 @@ export class Blog implements IBlog {
 
   component: () => any
 
-  convertCategory (category: BlogCategory | string): BlogCategory {
-    if (typeof (category) === 'string') {
-      return BlogCategory[category as keyof typeof BlogCategory]
-    }
-
-    return category
-  }
-
-  convertComponent (component: (() => any) | string): () => any {
-    if (typeof (component) === 'string') {
-      return () => import(`@/blogs/content/${component}`)
-    }
-
-    return component
-  }
-
   public constructor (src?: IBlog) {
     if (src) {
       this.title = src.title
       this.description = src.description
       this.category = this.convertCategory(src.category)
-      this.tags = src.tags
+      this.tags = this.convertTags(src.tags)
       this.date = new Date(src.date)
       this.component = this.convertComponent(src.component)
 
@@ -51,6 +36,35 @@ export class Blog implements IBlog {
       this.component = () => { /* Empty */ }
     }
   }
+
+  convertCategory (category: BlogCategory | string): BlogCategory {
+    if (typeof (category) === 'string') {
+      return BlogCategory[category as keyof typeof BlogCategory]
+    }
+
+    return category
+  }
+
+  convertComponent (component: (() => any) | string): () => any {
+    if (typeof (component) === 'string') {
+      return () => import(`@/blogs/content/${component}`)
+    }
+
+    return component
+  }
+
+  convertTags (tags: Array<BlogTag> | Array<string>): Array<BlogTag> {
+    const blogTagz: Array<BlogTag> = []
+    for (const tag of tags) {
+      if (typeof (tag) === 'string') {
+        blogTagz.push(blogTags[tag])
+      }
+      else {
+        blogTagz.push(tag as BlogTag)
+      }
+    }
+    return blogTagz
+  }
 }
 
 export interface IBlog {
@@ -58,6 +72,6 @@ export interface IBlog {
   description: string;
   date: Date | string;
   category: BlogCategory | string;
-  tags: Array<BlogTag>;
+  tags: Array<BlogTag> | Array<string>;
   component: (() => any) | string;
 }
