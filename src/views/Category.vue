@@ -13,7 +13,6 @@
 </template>
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator'
-import BlogDisplay from '@/components/BlogDisplay.vue'
 import BlogCard from '@/components/BlogCard.vue'
 import { blogs } from '@/blogs/blogs'
 import { Blog } from '../models/blog'
@@ -21,7 +20,6 @@ import { BlogCategory } from '../models/blog-category'
 
 @Component({
   components: {
-    BlogDisplay,
     BlogCard
   }
 })

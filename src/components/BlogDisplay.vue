@@ -38,3 +38,8 @@ export default class BlogDisplay extends Vue {
   align-items: center;
 }
 </style>
+<style>
+pre[class*="language-"] {
+  margin-bottom: 32px;
+}
+</style>

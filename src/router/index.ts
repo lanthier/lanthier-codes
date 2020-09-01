@@ -55,6 +55,16 @@ const routes: Array<RouteConfig> = [
     component: () => import('@/views/Python.vue')
   },
   {
+    path: '/general',
+    name: 'General',
+    meta: {
+      displayName: 'General',
+      nav: true,
+      title: 'Blogs - General'
+    },
+    component: () => import('@/views/General.vue')
+  },
+  {
     path: '/blog/:title',
     name: 'Blog',
     meta: {
