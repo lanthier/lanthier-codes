@@ -15,9 +15,10 @@ import { blogs } from '@/blogs/blogs'
   }
 })
 export default class BlogView extends Vue {
+  blogs = blogs
   get blog (): Blog | undefined {
     const title = this.$route.params.title
-    return blogs.find((blog: Blog) => blog.title === title)
+    return this.blogs.find((blog: Blog) => blog.title.includes(title))
   }
 }
 </script>
