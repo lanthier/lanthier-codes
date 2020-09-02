@@ -42,4 +42,9 @@ export default class BlogDisplay extends Vue {
 pre[class*="language-"] {
   margin-bottom: 32px;
 }
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 </style>

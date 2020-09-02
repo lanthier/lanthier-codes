@@ -187,5 +187,15 @@
       "Gridsome",
       "Vue"
     ]
+  },
+  {
+    "title": "Python Kata: Sum of odd numbers in a triangle",
+    "description": "Given a triangle of conseuctive odd numbers, calculate the row sums of a particular index: solution.",
+    "date": "2020-09-02T05:00:00.000Z",
+    "category": "Python",
+    "component": "kata-triangle-odd-numbers.vue",
+    "tags": [
+      "Python"
+    ]
   }
 ]
