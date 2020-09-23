@@ -13,7 +13,7 @@ const paths = [
 
 for (let blog of blogs) {
   paths.push({
-    path: baseUrl + '/' + encodeURI(blog.title),
+    path: baseUrl + '/blog/' + encodeURI(blog.url),
     lastmod: blog.date.toString(),
     priority: '0.8',
     changefreq: 'weekly'

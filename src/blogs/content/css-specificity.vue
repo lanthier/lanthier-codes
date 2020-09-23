@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <article>
     <h1 class="subtitle">
       What is CSS Specificity?
     </h1>
@@ -278,7 +278,7 @@
         </tr>
       </tbody>
     </table>
-  </section>
+  </article>
 </template>
 
 <script lang="ts">

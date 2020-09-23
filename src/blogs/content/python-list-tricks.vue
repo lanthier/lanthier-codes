@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <article>
     <p>
       My journey learning Python started with teaching a friend how to code. My friend had a Python class
       he needed to prepare for so I was willing to teach him all of the basics by learning Python myself.
@@ -66,7 +66,7 @@
       I'll stop here for now. These are some cool tricks that I really liked with Python lists! If I can remember
       any additional tricks I will update this post with some more.
     </p>
-  </section>
+  </article>
 </template>
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'

@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <article>
     <p>
       Let me skip the anticipation. It does not <em>really</em> matter which programming language you learn first. At least, that is what you will hear
       from most forum posters and other bloggers in this space. But what if you had to choose? Maybe you only want to learn one programming language,
@@ -48,11 +48,11 @@
     <p>
       I recommend <strong>C#</strong>. Everyone will tell you <strong>C++</strong> is the first language you should learn for video games, but C++
       is tough as a first programming language. It is harder to master and there is a lot more work involved to program simplistic operations. C# is a
-      modern framework and is the primary language of <a href="https://unity.com/">Unity</a> framework. Following my recommendation does not mean you
-      can't also learn C++, but you might have better luck learning C# first.
+      modern language and is the primary language of the <a href="https://unity.com/">Unity</a> game engine. Following my recommendation does not mean you
+      can't also learn C++, but you'll likely have better luck learning C# first.
     </p>
     <p>
-      C++ is typically the language people recommend because we popularly know the video game industry for using it to improve the speed of code.
+      C++ is typically the language Programmers recommend because we popularly know the video game industry for using it to improve the speed of code.
       C++ can work "closer" to the computer to better manage the memory the program uses. Thus, making the code faster. I don't think this is a good reason for
       someone to learn C++ as their first language.
     </p>
@@ -258,7 +258,7 @@
       Perl, Assembly, C no PHP as your first language.
     </p>
     <h1 class="subtitle">
-      Language Market and Popularity
+      Language Market
     </h1>
     <p>
       Uncommon and older programming languages seem to offer the highest pay, according to the 2020 Stack Overflow Developer Survey. Personally, I couldn't handle working
@@ -273,7 +273,7 @@
       where other languages would not. It will expose to functional programming and give you all the basics of languages like variables, functions, types, etc. Also,
       recent developments in JavaScript allow for more object-oriented programming.
     </p>
-  </section>
+  </article>
 </template>
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'

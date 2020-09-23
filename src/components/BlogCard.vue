@@ -19,7 +19,7 @@
       <a class="card-footer-item" @click="share">
         Share
       </a>
-      <router-link class="card-footer-item" :to="'/blog/' + blog.title">
+      <router-link class="card-footer-item" :to="'/blog/' + blog.url">
         View
       </router-link>
     </footer>

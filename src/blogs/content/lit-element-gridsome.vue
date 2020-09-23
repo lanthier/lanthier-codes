@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <article>
     <p>
       <a href="https://lit-element.polymer-project.org/">Lit element</a> is a useful library for creating web components. <a href="https://gridsome.org/">Gridsome</a>
       is a <a href="https://jamstack.org/">jamstack framework</a>, a static site generator, for Vue.js.
@@ -36,7 +36,7 @@
       prerendering your code through a <pre class="inline">gridsome build</pre>. If we import the webcomponent inside of the
       <pre class="inline">if (isClient)</pre> condition, gridsome build will not encounter the variable.
     </p>
-  </section>
+  </article>
 </template>
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'

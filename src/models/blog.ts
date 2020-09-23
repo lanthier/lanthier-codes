@@ -5,6 +5,7 @@ import { blogTags } from '@/blogs/blog-tags'
 export class Blog implements IBlog {
   title: string;
   description: string;
+  url: string;
   date: Date;
   category: BlogCategory;
   tags: Array<BlogTag>;
@@ -15,6 +16,7 @@ export class Blog implements IBlog {
     if (src) {
       this.title = src.title
       this.description = src.description
+      this.url = src.url
       this.category = this.convertCategory(src.category)
       this.tags = this.convertTags(src.tags)
       this.date = new Date(src.date)
@@ -30,6 +32,7 @@ export class Blog implements IBlog {
     else {
       this.title = ''
       this.description = ''
+      this.url = ''
       this.date = new Date()
       this.category = BlogCategory.General
       this.tags = new Array<BlogTag>()
@@ -70,6 +73,7 @@ export class Blog implements IBlog {
 export interface IBlog {
   title: string;
   description: string;
+  url: string;
   date: Date | string;
   category: BlogCategory | string;
   tags: Array<BlogTag> | Array<string>;

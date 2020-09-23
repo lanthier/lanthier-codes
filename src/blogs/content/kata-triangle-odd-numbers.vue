@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <article>
     <h1 class="subtitle">
       Problem
     </h1>
@@ -119,7 +119,7 @@
       takes in parameters as such: <pre class="inline">range(start, end, incrementor)</pre>. So do not forget the 2 to skip your even numbers, otherwise
       you will add them all!
     </p>
-  </section>
+  </article>
 </template>
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
@@ -143,8 +143,8 @@ row_sum_odd_numbers(3) # 7 + 9 + 11 = return 27`
   }
 
   get snippet3 () {
-  return `for i in range(start, end, 2):
-    sum += i`
+    return `for i in range(start, end, 2):
+      sum += i`
   }
 }
 </script>

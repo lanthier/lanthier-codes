@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <article>
     <p>
       While iterating through lists in Vue.js, you may have come across a certain annoyance before:
       <b>
@@ -24,7 +24,7 @@
       The reason why we are using vue templates are because they are not rendered in the DOM. For additional information on conditional rendering,
       see the <a href="https://vuejs.org/v2/guide/conditional.html">Conditional Rendering</a> docs on the Vue.js site.
     </p>
-  </section>
+  </article>
 </template>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'

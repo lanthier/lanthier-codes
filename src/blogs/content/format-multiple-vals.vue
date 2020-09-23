@@ -1,12 +1,11 @@
 <template>
-  <section>
+  <article>
     <p>
       As a tutor one of the most common beginner Python tasks I come across is formatting strings.
       In this post, I will show you a few different ways to can go about formatting your code and also how to support multiple values
       in your string formats. We will start with the <pre class="inline">%</pre> method and then move to the
       <pre class="inline">.format()</pre> function.
     </p>
-    <br />
     <strong>Single format using <pre class="inline">%</pre></strong>
     <prism :code="codeSnippet1" language="python" />
     <p>
@@ -14,7 +13,6 @@
       the <pre class="inline">%s</pre> in the string on the left. The <pre class="inline">s</pre> in <pre class="inline">%s</pre>
       represents the data type of your variable. In this case, it is a string.
     </p>
-    <br />
     <strong>Multi format using <pre class="inline">%</pre></strong>
     <prism :code="codeSnippet2" language="python" />
     <p>
@@ -22,11 +20,9 @@
       The <pre class="inline">%</pre> operator can take in a single value or a tuple of multiple values. Then, it will apply
       the variables inside of the tuple in order from left to right to your string you wish to be formatted.
     </p>
-    <br />
     <p>
       Before I show you the <pre class="inline">.format()</pre> method, here are some useful data types you can use:
     </p>
-    <br />
     <table class="table">
       <tbody>
         <tr>
@@ -57,16 +53,14 @@
       Here I am using <pre class="inline">{0}</pre> to indicate the 0th parameter in my format function. You can also use
       <pre class="inline">{:}</pre> to indicate the "next" parameter.
     </p>
-    <br />
     <strong>Multi format using <pre class="inline">.format()</pre></strong>
     <prism :code="codeSnippet4" language="python" />
-    <br />
     <p>
       In terms of using single and multiple formats, that's all there really is to it. These can get pretty complex based on the
       data types you are using and how exactly you need them formatted. I will be releasing a cheat sheet shortly along with my
       first interactive blog post in how to deal with these.
     </p>
-  </section>
+  </article>
 </template>
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'

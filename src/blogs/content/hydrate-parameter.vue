@@ -1,8 +1,9 @@
 <template>
-  <section>
+  <article>
     <p>
-      This pattern is used for when you want "extra" data on one of your objects, but don't always need that data.
-      Let's look at a simple example before I go into detail.
+      The HTTP hydration parameter pattern is used for when you want "extra" data on one of your objects, but don't always need that data.
+      You may have an API that returns an InventoryItem that is tied with its related Suppliers. You could configure your API method to optionally return
+      that Suppliers with the InventoryItem.
     </p>
     <prism language="csharp" :code="codeSnippet1" />
     <p>
@@ -13,7 +14,8 @@
     <prism language="csharp" :code="codeSnippet2" />
     <p>
       Now, we are only populating employees if the consumer passes in a <pre class="inline">hydrate</pre>
-      parameter equal to true.
+      parameter equal to true. This allows us to reduce the complexity of the data returned and sometimes
+      speed up your API if these relationships contain large amounts of data.
     </p>
     <h2 class="subtitle">
       Benefits of this Pattern
@@ -29,27 +31,45 @@
       to run. All because the first example assumed the consumer always wanted a fully hydrated object!
     </p>
     <h2 class="subtitle">
-      What is "extra" data?
+      Defining "extra" data
     </h2>
     <p>
       In my opinion, the data that you should omit if <pre class="inline">hydrate=false</pre> is any data that
       you do NOT need for an <pre class="inline">UPDATE</pre> operation. At a bare minimum we need to provide
       our API consumers with sufficient data on a <pre class="inline">GET</pre> operation to support an
-      <pre class="inline">UPDATE</pre>, otherwise they can accidentally override data will null values.
+      <pre class="inline">UPDATE</pre>, otherwise they can accidentally override data will null values. Let's
+      talk about how to separate these concerns using the <router-link :to="'/blog/' + csharpInfoPatternUrl">info pattern</router-link>
+    </p>
+    <label for="employer-snippet"><strong>EmployerInfo.cs</strong></label>
+    <prism name="employer-snippet" :code="codeSnippet3" language="csharp" />
+    <p>
+      The <pre class="inline">EmployerInfo</pre> class contains all <strong>updatable</strong> properties. These
+      are properties that the consumer can manipulate on add or update.
+    </p>
+    <label for="employer-snippet"><strong>Employer.cs</strong></label>
+    <prism name="employer-snippet" :code="codeSnippet4" language="csharp" />
+    <p>
+      The <pre class="inline">Employer</pre> class contains all <strong>not updatable</strong> properties. Properties
+      that are eventually translated to primary keys belong here. Some entity relationships may also live in here.
+    </p>
+    <p>
+      Since an employer in our database has thousands of employees <pre class="inline">Employees</pre>, we do not want
+      populate them for every <pre class="inline">GET</pre>. Instead, we opt to populate them only when the client wishes to.
+      Thus, we can define the <pre class="inline">Employees</pre> property as "extra data" in terms of our pattern.
     </p>
     <h2 class="subtitle">
-      Complicated Practical examples
+      Complex Practical examples
     </h2>
     <p>
-      I have used this pattern numerous times as a professional. Let's go through (near exact) examples of some of
-      the work I have done in the past using hydrate params.
+      I have used this pattern numerous times as a professional. Let's go through (near exact) examples of some
+      work I have done in the past using hydrate params.
     </p>
     <strong>Multiple data fields</strong>
     <p>
       In a real life scenario, it is likely you will need to do this not just for one data fields but for several.
       Here is an example of something similar to what I coded for a content management system in the past.
     </p>
-    <prism language="csharp" :code="codeSnippet3" />
+    <prism language="csharp" :code="codeSnippet5" />
     <p>
       <pre class="inline">TagIds</pre> and <pre class="inline">Logo</pre> are both required properties for an update,
       so we include those regardless of the value of <pre class="inline">hydrate</pre>.
@@ -59,7 +79,7 @@
       not required for an update but are important fields on a piece.
     </p>
     <p>
-      On each <pre class="inline">File</pre> we actually hydrate even more data. We grab the children
+      On each <pre class="inline">File</pre> we hydrate even more data. We grab the children
       <pre class="inline">Preview</pre> entities for each file. This is a great example of how hydrate can really make
       your API more efficient.
     </p>
@@ -68,15 +88,15 @@
     </h2>
     <p>
       Hydration parameters are something I hope to see more of. All too many times I see APIs bringing back large amounts
-      of data that I don't ever use as a consumer. I wouldn't be opposed to using two or three hydration parameters for
+      of data that I never use as a consumer. I wouldn't be opposed to using two or three hydration parameters for
       specific sectors of data either! You could have a parameter in my previous example named
       <pre class="inline">hydrateTools</pre> and another named <pre class="inline">hydrateFiles</pre>. The most important
-      part is we are being effecient.
+      part is we are being efficient.
     </p>
     <p>
-      Next time you are returning objects with children entities in your APIs, definitely consider using this pattern!
+      Next time you are returning objects with children entities in your APIs, consider using this pattern.
     </p>
-  </section>
+  </article>
 </template>
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
@@ -91,6 +111,8 @@ public async Task<IActionResult> GetEmployer([FromRoute]int id)
 {
     var employer = await DataAccessor.Employers.GetAsync(id);
     employer.Employees = await DataAccessor.Employees.GetChildrenAsync(employer.Id);
+    
+    return Ok(employer);
 }`
   }
 
@@ -105,11 +127,39 @@ public async Task<IActionResult> GetEmployer([FromRoute]int id, [FromQuery]bool 
     {
         employer.Employees = await DataAccessor.Employees.GetChildrenAsync(employer.Id);
     }
-            
+
+    return Ok(employer);
 }`
   }
 
   get codeSnippet3 () {
+    return `namespace LanthierCodes.Employer.Models
+{
+    public class EmployerInfo
+    {
+        public string Name { get; set; }
+
+        public string Contact { get; set; }
+    }
+}
+`
+  }
+
+  get codeSnippet4 () {
+    return `namespace LanthierCodes.Employer.Models
+{
+    using System.Collections.Generic;
+
+    public class Employer : EmployerInfo
+    {
+        public int Id { get; set; }
+
+        public List<Employee> Employees { get; set; } // Our "extra" data we don't always need to return
+    }
+}`
+  }
+
+  get codeSnippet5 () {
     return `[HttpGet("{id}")]
 [ProducesResponseType(typeof(ContentItem), StatusCodes.Status200OK)]
 [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]

@@ -28,7 +28,6 @@ import { IDialog } from '@/models/dialog'
 import { BlogCategory } from '@/models/blog-category'
 import { SocialMediaPlatform } from '@/models/social-media-platform'
 import { FacebookHelper } from '@/helpers/facebook-helper'
-import thumbnailJson from '@/assets/thumbnails.json'
 
 @Component
 export default class ShareDialog extends Vue implements IDialog {

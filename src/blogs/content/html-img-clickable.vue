@@ -1,12 +1,12 @@
 <template>
-  <section>
+  <article>
     <p>
       Hey all, quick one tonight. All that we need to do to make an image clickable is wrap in
       <pre class="inline">&lt;a&gt; tags.</pre>
     </p>
     <br />
     <prism language="html" :code="codeSnippet1" />
-  </section>
+  </article>
 </template>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'

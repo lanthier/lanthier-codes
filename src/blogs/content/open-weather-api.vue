@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <article>
     <p>
       As an online tutor, I've noticed one of the most common APIs students are asked to learn is the Open Weather API.
       Often teachers want their students to utilize something specific (ajax, fetch, etc.) in order to call the API.
@@ -67,7 +67,7 @@
       represent each methodology separately. After that, for each type of request, I store the variable rather
       than return it.
     </p>
-  </section>
+  </article>
 </template>
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'

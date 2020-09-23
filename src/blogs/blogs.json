@@ -2,6 +2,7 @@
   {
     "title": "String Format with Multiple Values in Python",
     "description": "How to format multiple values on a string",
+    "url": "string-format-multiple-values-python",
     "date": "2020-08-20T04:20:39.465Z",
     "component": "format-multiple-vals.vue",
     "category": "Python",
@@ -16,6 +17,7 @@
   {
     "title": "Dealing with v-for and v-if",
     "description": "A common issue I have ran into while using v-for and v-if",
+    "url": "v-for-v-if",
     "date": "2020-02-13T06:00:00.000Z",
     "component": "vue-v-item-and-v-for.vue",
     "category": "JavaScript",
@@ -36,10 +38,11 @@
     ]
   },
   {
-    "title": "Useful CRUD Object Pattern in C#",
+    "title": "C# Information Object Pattern for CRUD Operations",
     "description": "Your objects might be messier than you think",
+    "url": "info-object-pattern-csharp",
     "date": "2020-03-21T05:00:00.000Z",
-    "component": "csharp-obj-pattern.vue",
+    "component": "csharp-info-pattern.vue",
     "category": "CSharp",
     "tags": [
       {
@@ -52,8 +55,9 @@
   {
     "title": "Make HTML Image Clickable",
     "description": "How to make your images behave like links",
+    "url": "clickable-html-images",
     "date": "2020-01-13T06:00:00.000Z",
-    "category": "HTML/CSS",
+    "category": "HtmlCss",
     "component": "html-img-clickable.vue",
     "tags": [
       {
@@ -70,6 +74,7 @@
   {
     "title": "Gridsome Flexsearch and Buefy Autocomplete",
     "description": "Hooking up the gridsome flexsearch pluginto a b-autocomplete in Buefy",
+    "url": "gridsome-flexsearch-buefy-autocomplete",
     "date": "2020-07-27T05:00:00.000Z",
     "category": "JavaScript",
     "component": "gridsome-search-buefy.vue",
@@ -87,8 +92,9 @@
   {
     "title": "CSS Specificity",
     "description": "The order of importance of CSS styles",
+    "url": "css-specificity",
     "date": "2020-08-13T05:00:00.000Z",
-    "category": "HTML/CSS",
+    "category": "HtmlCss",
     "component": "css-specificity.vue",
     "tags": [
       {
@@ -109,6 +115,7 @@
   {
     "title": "How to Count Cells in a Table",
     "description": "JavaScript method of counting the amount of cells in an HTML table",
+    "url": "count-cells-in-table",
     "date": "2020-08-17T05:00:00.000Z",
     "category": "JavaScript",
     "component": "counting-table-cells.vue",
@@ -125,7 +132,8 @@
   },
   {
     "title": "Using the OpenWeatherAPI",
-    "description": "A guide at how to call the open weather api using fetch, ajax, and xhr requests.",
+    "description": "A guide at how to call the open weather api using fetch, ajax, and xhr requests",
+    "url": "using-openweather-api",
     "date": "2020-08-20T05:00:00.000Z",
     "category": "JavaScript",
     "component": "open-weather-api.vue",
@@ -142,7 +150,8 @@
   },
   {
     "title": "HTTP Hydration Parameters",
-    "description": "A pattern you can use to for your APIs.",
+    "description": "A pattern you can use to for your APIs",
+    "url": "http-hydration-parameters-csharp",
     "date": "2020-08-26T05:00:00.000Z",
     "category": "CSharp",
     "component": "hydrate-parameter.vue",
@@ -156,7 +165,8 @@
   },
   {
     "title": "Python List Tricks",
-    "description": "You can do really cool things in Python with lists.",
+    "description": "You can do really cool things in Python with lists",
+    "url": "python-list-tricks",
     "date": "2020-08-26T05:00:00.000Z",
     "category": "Python",
     "component": "python-list-tricks.vue",
@@ -166,8 +176,9 @@
   },
   {
     "title": "Which Programming Language Should I Learn First?",
-    "description": "In 2020, what programming language should you learn first? Java, Python, JavaScript or another language?",
-    "date": "2020-08-26T05:00:00.000Z",
+    "description": "In 2020, what programming language should you learn first?",
+    "url": "which-program-to-learn-first",
+    "date": "2020-09-05T05:00:00.000Z",
     "category": "General",
     "component": "which-programming-language.vue",
     "tags": [
@@ -179,6 +190,7 @@
   {
     "title": "Using Lit Elements with Gridsome",
     "description": "After your create your own web component, how can we incoporate these elements into Gridsome?",
+    "url": "lit-elements-and-gridsome",
     "date": "2020-09-01T05:00:00.000Z",
     "category": "JavaScript",
     "component": "lit-element-gridsome.vue",
@@ -190,12 +202,35 @@
   },
   {
     "title": "Python Kata: Sum of odd numbers in a triangle",
-    "description": "Given a triangle of conseuctive odd numbers, calculate the row sums of a particular index: solution.",
+    "description": "Given a triangle of conseuctive odd numbers, calculate the row sums of a particular index: solution",
+    "url": "kata-sum-off-odd-numbers-triangle",
     "date": "2020-09-02T05:00:00.000Z",
     "category": "Python",
     "component": "kata-triangle-odd-numbers.vue",
     "tags": [
       "Python"
+    ]
+  },
+  {
+    "title": "Semantic HTML: Do this NOW",
+    "description": "Stop using so many <div> elements",
+    "url": "semantic-html",
+    "date": "2020-09-05T05:00:00.000Z",
+    "category": "HtmlCss",
+    "component": "semantic-html.vue",
+    "tags": [
+      "HTML"
+    ]
+  },
+  {
+    "title": "4 HTML Elements I Didn't Know Existed",
+    "description": "4 interesting HTML elements that we could use instead of div. Here are some HTML elements I didn't know about before blogging.",
+    "url": "4-html-elements",
+    "date": "2020-09-16T05:00:00.000Z",
+    "category": "HtmlCss",
+    "component": "4-html-elements.vue",
+    "tags": [
+      "HTML"
     ]
   }
 ]

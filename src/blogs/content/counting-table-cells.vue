@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <article>
     <p>
       I came across a cool problem on a recent coding assessment: find the table in your HTML document that has the highest count of table cells.
       I will start by showing my algorithmic thought process, then I will get into some code for the algorithm. I will not yet publish the complete
@@ -37,7 +37,7 @@
       That's it! The algorithm is straightforward, the primary thing is to watch for that <pre class="inline">HtmlNodeColletion</pre>, it is not the same
       thing as an array in JavaScript so it won't have your typical iterators.
     </p>
-  </section>
+  </article>
 </template>
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'

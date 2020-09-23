@@ -47,4 +47,7 @@ pre[class*="language-"] {
   flex-direction: column;
   justify-content: center;
 }
+.subtitle {
+  margin-top: 32px;
+}
 </style>

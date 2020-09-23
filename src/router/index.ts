@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
+import { blogs } from '@/blogs/blogs'
+import { Blog } from '@/models/blog'
 
 Vue.use(VueRouter)
 const defaultTitle = 'Lanthier Codes'
@@ -65,7 +67,7 @@ const routes: Array<RouteConfig> = [
     component: () => import('@/views/General.vue')
   },
   {
-    path: '/blog/:title',
+    path: '/blog/:url',
     name: 'Blog',
     meta: {
       displayName: 'Blog',
@@ -84,7 +86,8 @@ const router = new VueRouter({
 router.afterEach((to) => {
   Vue.nextTick(() => {
     if (to.name === 'Blog') {
-      document.title = to.params.title
+      const matchingBlog = blogs.find((blog: Blog) => blog.url === to.params.url)
+      document.title = matchingBlog ? matchingBlog.title : 'Lanthier Codes Blog'
     }
     else {
       document.title = to.meta.title || defaultTitle
