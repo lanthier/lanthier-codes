@@ -232,5 +232,29 @@
     "tags": [
       "HTML"
     ]
+  },
+  {
+    "title": "Vue Composition API in Vue 2",
+    "description": "An overview of the Vue Composition API in Vue 2",
+    "url": "vue-composition-api-vue-2",
+    "date": "2020-11-27T05:00:00.000Z",
+    "category": "JavaScript",
+    "component": "vue-composition-api.vue",
+    "tags": [
+      "JavaScript",
+      "Vue"
+    ]
+  },
+  {
+    "title": "How to Copy Offscreen Text onto Clipboard in JavaScript",
+    "description": "Quick and clean example of how to copy text the user can't see onto their clipboards without JQuery.",
+    "url": "clipboard-offscreen-text",
+    "date": "2021-01-13T05:00:00.000Z",
+    "category": "JavaScript",
+    "component": "clipboard-offscreen-text.vue",
+    "tags": [
+      "JavaScript",
+      "Vue"
+    ]
   }
 ]
